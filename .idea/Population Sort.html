@@ -1,0 +1,50 @@
+<html>
+
+
+<head>
+    <script type="text/javascript">
+
+        var cities= ["Avondale",	"BullheadCity" ,"CasaGrande", "CasasAdobes" ,"Chandler", "Flagstaff" ,"Gilbert" ,"Glendal",	"LakeHavasu" ,"Mesa" ,"OroValley", "Peoria", "Phoenix" ,"Prescot" , "Scottsdale", "SierraVista" ,"Surprise" ,"Tempe" ,"Tucson" ,"Yuma"];
+        var populations = [35883,33769,25224, 54011,176581,52894,109697,218812,41938,396375,29700,108364,1321045,33938,202705,37775,30848,158625,486699,77515];
+
+
+
+
+
+
+        function sort(){
+            for (var i =0; i<populations.length; i++){
+                for (var j =i+1; j<populations.length; j++){
+
+                    if(populations[j]<populations[i]) {
+
+                        var temp = populations[i];
+
+                        var temp2 = cities[i];
+
+                        populations[i] = populations[j];
+
+                        cities[i] = cities [j];
+
+                        populations[j] = temp;
+
+                        cities[j] = temp2;
+                    }
+
+
+                }
+            }
+            print();
+        }
+
+
+        function print(){
+            for(var i=0;i<populations.length;i++){
+                document.write(populations[i]+"    "+cities[i]+"<br>");
+            }
+        }
+    </script>
+</head>
+<body onload="sort()">
+</body>
+</html>
